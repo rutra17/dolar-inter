@@ -17,7 +17,7 @@
       <!-- Seletor de valor em dólares -->
       <div class="value-input">
         <input type="number" id="dollarInput" placeholder="Valor da compra em USD" min="1" onkeypress="handleKeyPress(event)">
-        <div class="value-display" id="valueDisplay">R$ 1.339,25</div>
+        <div class="value-display" id="valueDisplay">R$</div>
         <p>Valor representa o montante total que virá na fatura, já incluído spread e IOF.</p>
         <button onclick="calculateTotal()" id="calculateBtn">Calcular</button>
       </div>
@@ -32,10 +32,10 @@
       <div id="Nubank" class="tabcontent active-content">
         <div class="card nubank">
           <h2>Nubank</h2>
-          <p>Cotação de compra: <span id="nubankCompra">R$ 6.17</span></p>
-          <p>Cotação de venda: <span id="nubankVenda">R$ 6.18</span></p>
-          <p>Spread: 4%, IOF: 4.38%</p>
-          <p>Total em Reais: <span id="nubankTotal">R$ 1.339,25</span></p>
+          <p>Cotação de compra: <span id="nubankCompra"></span></p>
+          <p>Cotação de venda: <span id="nubankVenda"></span></p>
+          <p>Taxa de Spread: 4%, IOF (atualizado 2024): 4.38%</p>
+          <p>Total em Reais: <span id="nubankTotal"></span></p>
         </div>
       </div>
 
@@ -43,10 +43,10 @@
       <div id="Inter" class="tabcontent">
         <div class="card inter">
           <h2>Inter</h2>
-          <p>Cotação de compra: <span id="interCompra">R$ 6.23</span></p>
-          <p>Cotação de venda: <span id="interVenda">R$ 6.25</span></p>
-          <p>Spread: 2%, IOF: 3.8%</p>
-          <p>Total em Reais: <span id="interTotal">R$ 1.292,53</span></p>
+          <p>Cotação de compra: <span id="interCompra"></span></p>
+          <p>Cotação de venda: <span id="interVenda"></span></p>
+          <p>Taxa de Spread: 2%, IOF (atualizado 2024): 3.8%</p>
+          <p>Total em Reais: <span id="interTotal"></span></p>
         </div>
       </div>
     </div>
