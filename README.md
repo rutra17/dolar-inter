@@ -1,2 +1,2 @@
-# dolar-inter
-Simplesmente um site para gerar a cotação atual do Inter para compras internacionais.
+# dolar-inter-nubank
+Simplesmente um site para gerar a cotação atual do Inter e Nubank para compras internacionais em dólar.
