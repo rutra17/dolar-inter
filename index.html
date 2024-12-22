@@ -16,7 +16,7 @@
 
       <!-- Seletor de valor em dólares -->
       <div class="value-input">
-        <input type="number" id="dollarInput" value="200" min="1" onkeypress="handleKeyPress(event)">
+        <input type="number" id="dollarInput" placeholder="Valor da compra em USD" min="1" onkeypress="handleKeyPress(event)">
         <div class="value-display" id="valueDisplay">R$ 1.339,25</div>
         <p>Valor representa o montante total que virá na fatura, já incluído spread e IOF.</p>
         <button onclick="calculateTotal()" id="calculateBtn">Calcular</button>
