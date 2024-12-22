@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Dólar - Cartões</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Conversão de Dólar</h1>
+
+      <!-- Seletor de valor em dólares -->
+      <div class="value-input">
+        <input type="number" id="dollarInput" value="200" min="1" onkeypress="handleKeyPress(event)">
+        <div class="value-display" id="valueDisplay">R$ 1.339,25</div>
+        <p>Valor representa o montante total que virá na fatura, já incluído spread e IOF.</p>
+        <button onclick="calculateTotal()" id="calculateBtn">Calcular</button>
+      </div>
+
+      <!-- Tabs para Nubank e Inter -->
+      <div class="tabs">
+        <button class="tablinks active nubank-btn" onclick="openTab(event, 'Nubank')" id="defaultTab">Nubank</button>
+        <button class="tablinks inter-btn" onclick="openTab(event, 'Inter')">Inter</button>
+      </div>
+
+      <!-- Aba Nubank -->
+      <div id="Nubank" class="tabcontent active-content">
+        <div class="card nubank">
+          <h2>Nubank</h2>
+          <p>Cotação de compra: <span id="nubankCompra">R$ 6.17</span></p>
+          <p>Cotação de venda: <span id="nubankVenda">R$ 6.18</span></p>
+          <p>Spread: 4%, IOF: 4.38%</p>
+          <p>Total em Reais: <span id="nubankTotal">R$ 1.339,25</span></p>
+        </div>
+      </div>
+
+      <!-- Aba Inter -->
+      <div id="Inter" class="tabcontent">
+        <div class="card inter">
+          <h2>Inter</h2>
+          <p>Cotação de compra: <span id="interCompra">R$ 6.23</span></p>
+          <p>Cotação de venda: <span id="interVenda">R$ 6.25</span></p>
+          <p>Spread: 2%, IOF: 3.8%</p>
+          <p>Total em Reais: <span id="interTotal">R$ 1.292,53</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+
+  </body>
+
+</html>
