@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversão de Dólar - Cartões</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js" defer=""></script>
     <script type="text/javascript" src="./index.js" defer=""></script>
     <link rel="stylesheet" href="./index.css">
   </head>
@@ -16,9 +17,9 @@
 
       <!-- Seletor de valor em dólares -->
       <div class="value-input">
-        <input type="number" id="dollarInput" placeholder="Valor da compra em USD" min="1" onkeypress="handleKeyPress(event)">
+        <input type="number" id="dollarInput" placeholder="Valor da compra em USD" min="1" onkeypress="handleKeyPress(event)" step="0.01">
         <div class="value-display" id="valueDisplay">R$</div>
-        <p>Valor representa o montante total que virá na fatura, já incluído spread e IOF.</p>
+        <p class="small-text">Valor representa o montante total que virá na fatura, já incluído spread e IOF.</p>
         <button onclick="calculateTotal()" id="calculateBtn">Calcular</button>
       </div>
 
@@ -32,10 +33,11 @@
       <div id="Nubank" class="tabcontent active-content">
         <div class="card nubank">
           <h2>Nubank</h2>
-          <p>Cotação de compra: <span id="nubankCompra"></span></p>
-          <p>Cotação de venda: <span id="nubankVenda"></span></p>
-          <p>Taxa de Spread: 4%, IOF (atualizado 2024): 4.38%</p>
-          <p>Total em Reais: <span id="nubankTotal"></span></p>
+          <p class="spaced">Taxa de Spread: 4%</p>
+          <p class="spaced">IOF (atualizado 2024): 4.38%</p>
+          <p class="hidden spaced">Cotação de compra: <span id="nubankCompra"></span></p>
+          <p class="hidden spaced">Cotação de venda: <span id="nubankVenda"></span></p>
+          <p class="hidden spaced">Total em Reais: <span id="nubankTotal"></span></p>
         </div>
       </div>
 
@@ -43,14 +45,21 @@
       <div id="Inter" class="tabcontent">
         <div class="card inter">
           <h2>Inter</h2>
-          <p>Cotação de compra: <span id="interCompra"></span></p>
-          <p>Cotação de venda: <span id="interVenda"></span></p>
-          <p>Taxa de Spread: 2%, IOF (atualizado 2024): 3.8%</p>
-          <p>Total em Reais: <span id="interTotal"></span></p>
+          <p class="spaced">Taxa de Spread: 2%</p>
+          <p class="spaced">IOF (atualizado 2024): 3.8%</p>
+          <p class="hidden spaced">Cotação de compra: <span id="interCompra"></span></p>
+          <p class="hidden spaced">Cotação de venda: <span id="interVenda"></span></p>
+          <p class="hidden spaced">Total em Reais: <span id="interTotal"></span></p>
         </div>
       </div>
+
+      <!-- Data e hora da última cotação -->
+      <div class="last-quote hidden" id="lastQuote">
+        <p>Última cotação do dólar comercial fornecida pelo Banco Central do Brasil:</p>
+        <p id="lastQuoteDateTime"></p>
+      </div>
     </div>
-    <script src="script.js"></script>
+
 
 
   </body>
